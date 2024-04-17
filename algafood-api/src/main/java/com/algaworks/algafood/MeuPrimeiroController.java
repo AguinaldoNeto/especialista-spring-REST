@@ -9,18 +9,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class MeuPrimeiroController {
 
-    private AtivacaoClienteService service;
+    private AtivacaoClienteService ativacaoClienteService;
 
-    public MeuPrimeiroController(AtivacaoClienteService service) {
-        this.service = service;
+    public MeuPrimeiroController(AtivacaoClienteService ativacaoClienteService) {
+        this.ativacaoClienteService = ativacaoClienteService;
     }
 
     @GetMapping("/hello")
     @ResponseBody
     public String hello() {
-        Cliente cliente = new Cliente("Neto", "neto@email", "4499999-8888");
+        Cliente joao = new Cliente("João", "joao@xyz.com", "3499998888");
 
-        service.ativar(cliente);
-        return cliente.getNome();
+        ativacaoClienteService.ativar(joao);
+
+        return "Hello!";
     }
 }
