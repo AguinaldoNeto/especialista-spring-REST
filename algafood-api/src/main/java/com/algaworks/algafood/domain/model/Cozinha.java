@@ -7,10 +7,9 @@ import java.util.Objects;
 public class Cozinha {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 30)
     private String nome;
 
     public Long getId() {
