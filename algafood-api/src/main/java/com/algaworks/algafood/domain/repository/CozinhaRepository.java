@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface CozinhaRepository {
+
     List<Cozinha> listar();
 
     Cozinha buscar(Long id);
